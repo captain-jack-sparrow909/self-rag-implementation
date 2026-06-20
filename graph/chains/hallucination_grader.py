@@ -1,6 +1,9 @@
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_openai import ChatOpenAI
 from pydantic import BaseModel, Field
+from dotenv import load_dotenv
+
+load_dotenv()
 
 class GradeHallucination(BaseModel):
      """Binary score for hallucination present in generation answer."""

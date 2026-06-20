@@ -17,7 +17,7 @@ system = """you are a grader assessing whether an answer addresses / resolves a 
 
 prompt_template = ChatPromptTemplate.from_messages([
     ("system", system),
-    ("human", "LLM Generation: {generation} question: {question}")
+    ("human", "generation: {generation} \n question: {question}")
 ])
 
 answer_grader_chain = prompt_template | llm.with_structured_output(GradeAnswer)
